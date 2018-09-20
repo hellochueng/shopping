@@ -73,6 +73,10 @@ public class UserServiceImpl implements UserService {
         TaotaoResult taotaoResult = this.check(user.getUsername(),1);
         if(!(Boolean)taotaoResult.getData()) {
             return TaotaoResult.build(400,"用户名不能重复");
+            
+            
+            
+            
         }
         //password
         if(StringUtils.isBlank(user.getPassword())) {
